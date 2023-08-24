@@ -8,14 +8,13 @@ class SimilerBooksCubit extends Cubit<SimilerBooksStates> {
   SimilerBooksCubit(this.homerepo) : super(SimilerBooksInitialState());
   final HomeRepo homerepo;
 
-  // Future<void> featuresimilerbooks({required String category}) async{
-  //   emit(SimilerBooksLoadingState());
-  //
-  //   // var response = await homerepo.featuredsimlierbooks(category: category);
-  //   response.fold((faillure) {
-  //     emit(SimilerBooksError(errormessage: faillure.errormessage));
-  //   }, (books) {
-  //     emit(SimilerBooksSuccerss(books: books));
-  //   });
-  // }
+  Future<void> featuresimilerbooks({required String category}) async{
+    emit(SimilerBooksLoadingState());
+     var response = await homerepo.featuredsimlierbooks(category: category);
+    response.fold((failure) {
+      emit(SimilerBooksErrorState(errormessage: failure.errormessage));
+    }, (books) {
+      emit(SimilerBooksSuccessState(books: books));
+    });
+  }
   }

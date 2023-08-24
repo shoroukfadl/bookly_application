@@ -10,7 +10,7 @@ import '../../features/Splash/presentation/views/home_view.dart';
 import '../../features/home/data/model/book_model_items.dart';
 import '../../features/home/data/repos/homereposimplement.dart';
 import '../../features/home/presentation/manger/similerbooks/similer_books_cubit.dart';
-import '../../features/home/presentation/view/bookdetils.dart';
+import '../../features/home/presentation/view/bookdetails.dart';
 
 abstract class AppRouter {
   static String kHomePath = "/HomeView";

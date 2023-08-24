@@ -10,6 +10,7 @@ class volumeInfo{
     List<dynamic>? authors;
     List<dynamic>? categories;
     ImageLinks? imageLinks;
+    String? previewLink;
 
   volumeInfo.fromjson(Map<String,dynamic> json){
     title =json['title'];
@@ -17,7 +18,8 @@ class volumeInfo{
     publishedDate =json['publishedDate'];
     description =json['description'];
     authors =json['authors'];
-    categories =(json['categories']);
+    categories =json['categories'];
+    previewLink =json['previewLink'];
     imageLinks= ImageLinks.fromjson(json['imageLinks']);
   }
 
@@ -29,6 +31,7 @@ class volumeInfo{
     "description" :description,
     "authors" : authors as List<dynamic>,
     "categories" :categories as List<dynamic>,
-    "imageLinks": imageLinks!.tojson()
+    "imageLinks": imageLinks!.tojson(),
+    "previewLink":previewLink
   };
 }

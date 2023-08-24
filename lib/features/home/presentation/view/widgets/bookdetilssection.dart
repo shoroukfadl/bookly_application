@@ -39,13 +39,13 @@ class BookDetilesSection extends StatelessWidget {
         const SizedBox(
           height: 12,
         ),
-        // BookRating(
-        //     count: book.volumeInfo.ratingcount ?? 0,
-        //     rating: book.volumeInfo.rating ?? 0),
+        BookRating(
+            count:  0,
+            rating:  0),
         const SizedBox(
           height: 15,
         ),
-       //  BookActionButton(book: book),
+         BookActionButton(book: book),
       ],
     );
   }

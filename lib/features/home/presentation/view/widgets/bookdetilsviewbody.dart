@@ -1,3 +1,4 @@
+import '../../../data/model/book_model.dart';
 import '../../../data/model/book_model_items.dart';
 import 'bookdetilssection.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class BookDetilsViewBody extends StatelessWidget {
             children: [
               const BookDetilsViewBodyAppBar(),
                BookDetilesSection(book: book),
-               Expanded(
+               const Expanded(
                 child: SizedBox(
                   height: 50,
                 ),

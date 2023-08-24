@@ -26,7 +26,7 @@ class SimillerBookView extends StatelessWidget {
       },
     ),
   );
-}else if (state is SimilerBooksErrorState) {
+}     else if (state is SimilerBooksErrorState) {
           return CustomErrorImage(errormesage: state.errormessage);
         } else {
           return const CustomLoadingImage();
